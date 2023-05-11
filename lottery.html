@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style>
+	.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    margin-left: 45%;
+    margin-top: 200px;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.dd{
+	margin-top: 10%;
+	margin-left: 35%;
+}
+</style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:#FF007F">
+	<div class="dd">
+	<h1 class="text-white">LOTTERY RESULTS</h1>
+</div>
+	
+<button onclick="fun();" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Click Me
+</button>
+<
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Lottary results</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+.      <div class="modal-body">
+        <p class="text-danger"> THE WINNER IS TICKET NUMBER:</p>
+        <input class="text-danger" type="text" id="test" readonly />
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
+	
+	
+	<p id="demo" class="text-danger"></p>
+	<script type="text/javascript">
+		function fun()
+		{
+			
+			
+			var lottery=["5678","3478","2901","2900","4578"];
+			  
+
+				 var newone = lottery[Math.floor(Math.random() * lottery.length)];
+	
+                  document.getElementById('test').value= newone;
+                  document.getElementById('demo').value= newone;
+                console.log(newone)
+		
+		}
+	
+
+	</script>
+
+</body>
+</html>
+	
